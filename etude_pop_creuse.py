@@ -108,7 +108,7 @@ fusion_cinema_CSP_CCCSO['CCCSO_Plus_de_3_fois'] = round((fusion_cinema_CSP_CCCSO
 fusion_cinema_CSP_CCCSO = fusion_cinema_CSP_CCCSO [['CSP_pop_creuse', '%_2020', 'pop_CCCSO', 'De 1 à 3 fois', 'CCCSO_1_à_3_fois', 'Plus de 3 fois', 'CCCSO_Plus_de_3_fois']]
 fusion_cinema_CSP_CCCSO['cinemas_total'] = fusion_cinema_CSP_CCCSO['CCCSO_1_à_3_fois'] + fusion_cinema_CSP_CCCSO['CCCSO_Plus_de_3_fois']
 
-st.write("Sur c'est 13500 hab. en se basant sur les chiffre de l'INSEE on peut estimer que environ 3600 vont au cinemas de 1 à 3 fois par an et 1800 plus de 3 fois soit 5400 personnes")
+st.write("Sur les 13500 hab. de la communauté de communes en se basant sur les chiffres de l'INSEE on peut estimer que environ 3600 vont au cinemas de 1 à 3 fois par an et 1800 plus de 3 fois soit 5400 personnes")
 
 df = fusion_cinema_CSP_CCCSO.drop([0],axis=0)
 
