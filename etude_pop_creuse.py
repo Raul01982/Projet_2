@@ -3,13 +3,13 @@ import pandas as pd
 import plotly.express as px
 
 
-link = "https://www.insee.fr/fr/statistiques/2011101?geo=DEP-23#chiffre-cle-1"
-link_1 = "https://www.insee.fr/fr/statistiques/2407676#graphique-figure1_radio1"
-pop_creuse = pd.read_html(link)
-culturel_creuse = pd.read_html(link_1)
+# link = "https://www.insee.fr/fr/statistiques/2011101?geo=DEP-23#chiffre-cle-1"
+# link_1 = "https://www.insee.fr/fr/statistiques/2407676#graphique-figure1_radio1"
+# pop_creuse = pd.read_html(link)
+# culturel_creuse = pd.read_html(link_1)
 
 
-# st.title('Etude de la population de Communauté de communes Creuse Sud-Ouest')
+st.title('Etude de la population de Communauté de communes Creuse Sud-Ouest')
 
 # st.write("Cinéma Claude Miller")
 
