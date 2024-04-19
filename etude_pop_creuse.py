@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
-import seaborn as sns
+import matplotlib.pyplot as plt
 import plotly.express as px
+
 
 link = "https://www.insee.fr/fr/statistiques/2011101?geo=DEP-23#chiffre-cle-1"
 link_1 = "https://www.insee.fr/fr/statistiques/2407676#graphique-figure1_radio1"
