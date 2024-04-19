@@ -11,7 +11,7 @@ import plotly.express as px
 
 st.title('Etude de la population de Communauté de communes Creuse Sud-Ouest')
 
-# st.write("Cinéma Claude Miller")
+st.write("Cinéma Claude Miller")
 
 
 # def refaire_tx(df):
@@ -85,8 +85,8 @@ st.title('Etude de la population de Communauté de communes Creuse Sud-Ouest')
 
 # culturel_creuse_age = culturel_creuse_age.drop(culturel_creuse_age.index[liste], axis=0)          
 
-# st.write('La commune de Bourganeuf est située à 33 km de Guéret, à 50 km de Limoges et compte 2450 hab.')
-# st.write('la Communauté de communes Creuse Sud-Ouest dont elle fait partie compte 13500 hab.')
+st.write('La commune de Bourganeuf est située à 33 km de Guéret, à 50 km de Limoges et compte 2450 hab.')
+st.write('la Communauté de communes Creuse Sud-Ouest dont elle fait partie compte 13500 hab.')
 
 # pop_creuse_age_CCCSO = pop_creuse_age[['Age_pop_creuse','%_2020']]
 # pop_creuse_age_CCCSO['pop_CCCSO'] = round((pop_creuse_age['%_2020']*13500)/100,0)
