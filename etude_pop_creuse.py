@@ -25,7 +25,7 @@ fig = px.pie(df, values='cinemas_total', names='CSP_pop_creuse',title='Répartit
 
 st.plotly_chart(fig, use_container_width=True)
 
-fig_1 = px.bar(df, y=['CCCSO_1_à_3_fois','CCCSO_Plus_de_3_fois'], x='fusion_cinema_CSP_CCCSO')
+fig_1 = px.bar(df, y=['CCCSO_1_à_3_fois','CCCSO_Plus_de_3_fois'], x='CSP_pop_creuse')
 #px.ylabel("nb de personne")
 #px.xlabel("Categorie socio-professionnel")
 st.plotly_chart(fig_1, use_container_width=True)
