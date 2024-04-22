@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 link = "https://raw.githubusercontent.com/Raul01982/Projet_2/main/fusion_cinema_csp_cccso.csv"
-fusion_cinema_CSP_CCCSO = pd.read_html(link)
+fusion_cinema_CSP_CCCSO = pd.read_csv(link)
 
 st.title('Etude de la population de Communauté de communes Creuse Sud-Ouest')
 
