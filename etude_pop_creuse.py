@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-link = r"C:\Documents\Wild code school\Python\Projet 2\fusion_cinema_csp_cccso.csv"
-fusion_cinema_CSP_CCCSO = pd.read_csv(link)
+link = "https://raw.githubusercontent.com/Raul01982/Projet_2/main/fusion_cinema_csp_cccso.csv"
+fusion_cinema_CSP_CCCSO = pd.read_html(link)
 
 st.title('Etude de la population de Communauté de communes Creuse Sud-Ouest')
 
