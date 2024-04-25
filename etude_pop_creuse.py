@@ -1,8 +1,10 @@
 import streamlit as st
 import pandas as pd
+import seaborn as sns
 import plotly.express as px
+import matplotlib.pyplot as plt
 
-link = r"C:\Documents\Wild code school\Python\Projet 2\fusion_cinema_csp_cccso.csv"
+link = r"C:\Documents\Wild code school\Python\Projet 2\fusion_cinema_csp_cccso_v2.csv"
 fusion_cinema_CSP_CCCSO = pd.read_csv(link)
 
 st.title('Etude de la population de Communauté de communes Creuse Sud-Ouest')
@@ -25,12 +27,9 @@ fig = px.pie(df, values='cinemas_total', names='CSP_pop_creuse',title='Répartit
 
 st.plotly_chart(fig, use_container_width=True)
 
-fig_1 = px.bar(df, y=['CCCSO_1_à_3_fois','CCCSO_Plus_de_3_fois'], 
+fig_1 = px.bar(df, y=['de 1 à 3 fois','plus de 3 fois'],
                 x='CSP_pop_creuse',
-                labels={
-                        'CSP_pop_creuse': "Population de la communauté de commune",
-                        'CCCSO_1_à_3_fois': 'de 1 à 3 fois au cinemas/an',
-                        'CCCSO_Plus_de_3_fois':'plus de 3 fois au cinemas/an'}
+                labels={'CSP_pop_creuse': "Population de la communauté de commune","value": "Nombre habitant apetant"}
                )
 
 st.plotly_chart(fig_1, use_container_width=True)
