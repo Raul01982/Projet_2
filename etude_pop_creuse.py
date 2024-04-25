@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-link = "https://raw.githubusercontent.com/Raul01982/Projet_2/main/fusion_cinema_csp_cccso.csv"
+link = r"C:\Documents\Wild code school\Python\Projet 2\fusion_cinema_csp_cccso.csv"
 fusion_cinema_CSP_CCCSO = pd.read_csv(link)
 
 st.title('Etude de la population de Communauté de communes Creuse Sud-Ouest')
@@ -21,13 +21,18 @@ st.write("Sur les 13500 hab. de la communauté de communes en se basant sur les 
 
 df = fusion_cinema_CSP_CCCSO.drop([0],axis=0)
 
-fig = px.pie(df, values='cinemas_total', names='CSP_pop_creuse',title='Répartition de la population qui va au cinemas', color='CSP_pop_creuse')
+fig = px.pie(df, values='cinemas_total', names='CSP_pop_creuse',title='Répartition de la population allant au cinemas', color='CSP_pop_creuse')
 
 st.plotly_chart(fig, use_container_width=True)
 
-fig_1 = px.bar(df, y=['CCCSO_1_à_3_fois','CCCSO_Plus_de_3_fois'], x='CSP_pop_creuse')
-#px.ylabel("nb de personne")
-#px.xlabel("Categorie socio-professionnel")
+fig_1 = px.bar(df, y=['CCCSO_1_à_3_fois','CCCSO_Plus_de_3_fois'], 
+                x='CSP_pop_creuse',
+                labels={
+                        'CSP_pop_creuse': "Population de la communauté de commune",
+                        'CCCSO_1_à_3_fois': 'de 1 à 3 fois au cinemas/an',
+                        'CCCSO_Plus_de_3_fois':'plus de 3 fois au cinemas/an'}
+               )
+
 st.plotly_chart(fig_1, use_container_width=True)
 
 
