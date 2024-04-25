@@ -4,7 +4,7 @@ import seaborn as sns
 import plotly.express as px
 import matplotlib.pyplot as plt
 
-link = r"C:\Documents\Wild code school\Python\Projet 2\fusion_cinema_csp_cccso_v2.csv"
+link = r"C:\Documents\Wild code school\Python\Projet 2\fusion_cinema_csp_cccso.csv"
 fusion_cinema_CSP_CCCSO = pd.read_csv(link)
 
 st.title('Etude de la population de Communauté de communes Creuse Sud-Ouest')
