@@ -99,4 +99,4 @@ fusion_cinema_CSP_CCCSO['CCCSO_Plus_de_3_fois'] = round((fusion_cinema_CSP_CCCSO
 fusion_cinema_CSP_CCCSO = fusion_cinema_CSP_CCCSO [['CSP_pop_creuse', '%_2020', 'pop_CCCSO', 'De 1 à 3 fois', 'CCCSO_1_à_3_fois', 'Plus de 3 fois', 'CCCSO_Plus_de_3_fois']]
 fusion_cinema_CSP_CCCSO['cinemas_total'] = fusion_cinema_CSP_CCCSO['CCCSO_1_à_3_fois'] + fusion_cinema_CSP_CCCSO['CCCSO_Plus_de_3_fois']
 
-fusion_cinema_CSP_CCCSO.to_csv(r"C:\Documents\Wild code school\Python\Projet 2\fusion_cinema_csp_cccso.csv", index=False)
+fusion_cinema_CSP_CCCSO.to_csv(r"C:\Documents\Wild code school\Python\Projet 2\fusion_cinema_csp_cccso_v2.csv", index=False)
