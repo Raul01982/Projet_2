@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 
 fusion_cinema_CSP_CCCSO = pd.read_csv (r"C:\Documents\Wild code school\Python\Projet 2\fusion_cinema_csp_cccso.csv")
-estimation_spectateur = pd.read_csv(r"C:\Documents\Wild code school\Python\Projet 2\estimation_spectateur.csv")
+estimation_spectateur = pd.read_csv("https://raw.githubusercontent.com/Raul01982/Projet_2/main/estimation_spectateur.csv")
 
 st.title("Cinéma Claude Miller")
 
