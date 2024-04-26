@@ -3,6 +3,7 @@ import pandas as pd
 import seaborn as sns
 import plotly.express as px
 import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 
 fusion_cinema_CSP_CCCSO = pd.read_csv (r"C:\Documents\Wild code school\Python\Projet 2\fusion_cinema_csp_cccso.csv")
 estimation_spectateur = pd.read_csv(r"C:\Documents\Wild code school\Python\Projet 2\estimation_spectateur.csv")
@@ -29,7 +30,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 fig_1 = px.bar(df, y=['de 1 à 3 fois','plus de 3 fois'],
                 x='CSP_pop_creuse',
-                labels={'CSP_pop_creuse': "Population de la Communauté de Commune","value": "estimation en nombre habitant"},
+                labels={'CSP_pop_creuse': "Population de la Communauté de Commune","value": "Estimation en nombre habitant"},
                 title='Fréquence de sortie au cinéma en fonction de la catégorie socio-professionnelle'
                )
 
@@ -37,23 +38,27 @@ st.plotly_chart(fig_1, use_container_width=True)
 
 df_1 = estimation_spectateur.drop([0],axis=0)
 
-import plotly.graph_objects as go
-
 st.write('Estimations des entrées potentielles du cinéma')
 
 fig_2 = go.Figure(data=[
-    go.Bar(name='Estimation basse', 
-           x=df_1['CSP_pop_creuse'], 
-           y=df_1['estimation basse'],
-           text=df_1['estimation basse'],
-           textposition="outside",),
-    go.Bar(name='Estimation haute',
+        go.Bar(name='Estimation haute',
            x=df_1['CSP_pop_creuse'], 
            y=df_1['estimation haute'],
            text=df_1['estimation haute'],
+           textposition="outside",),
+           go.Bar(name='Estimation basse', 
+           x=df_1['CSP_pop_creuse'], 
+           y=df_1['estimation basse'],
+           text=df_1['estimation basse'],
            textposition="outside",)
         ])
 # Change the bar mode
 fig_2.update_layout(barmode='group')
 
 st.plotly_chart(fig_2, use_container_width=True)
+
+st.write("En 2022, Le cinèma Claude Miller a fait 8 820 entrées, ce qui est en dessous de l'estimation basse sur le potentiel d'entrée sur le secteur (environ 10 900).")
+
+st.write("Nous pouvons constater que les retraités et les personnes sans activité représentent le potentiel d'entrée le plus important, 40% environ.")
+
+st.write("Ces deux catégories ont des points communs et peuvent être travaillées avec une même stratégie, d'une part tarifaire et d'autre part avec une offre de film spécifique !")
