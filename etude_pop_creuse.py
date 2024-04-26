@@ -59,6 +59,6 @@ st.plotly_chart(fig_2, use_container_width=True)
 
 st.write("En 2022, Le cinèma Claude Miller a fait 8 820 entrées, ce qui est en dessous de l'estimation basse sur le potentiel d'entrée sur le secteur (environ 10 900).")
 
-st.write("Nous pouvons constater que les retraités et les personnes sans activité représentent le potentiel d'entrée le plus important, 40% environ.")
+st.write("Nous pouvons constater que les retraités et les personnes sans activité représentent le potentiel d'entrée le plus important, 41% environ.")
 
 st.write("Ces deux catégories ont des points communs et peuvent être travaillées avec une même stratégie, d'une part tarifaire et d'autre part avec une offre de film spécifique !")
